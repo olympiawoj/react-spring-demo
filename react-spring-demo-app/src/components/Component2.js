@@ -21,6 +21,9 @@ class Component2 extends React.Component {
                 dolor irure mollit veniam magna. Laboris excepteur ipsum anim
                 Lorem tempor sit ut occaecat.
               </p>
+              <button style={btn} onClick={this.props.toggle}>
+                Toggle Component 3
+              </button>
             </div>
           </div>
         )}
@@ -34,4 +37,13 @@ const c2style = {
   background: "slateblue",
   color: "white",
   padding: "1.5rem"
+};
+
+const btn = {
+  background: "#333",
+  color: "#fff",
+  padding: "1rem 2rem",
+  border: "none",
+  textTansform: "uppercase",
+  margin: "15px 0"
 };
