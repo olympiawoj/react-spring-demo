@@ -19,6 +19,18 @@ export default function Component1() {
               irure mollit veniam magna. Laboris excepteur ipsum anim Lorem
               tempor sit ut occaecat.
             </p>
+            <Spring
+              from={{ number: 0 }}
+              to={{ number: 10 }}
+              //it will take 10 secs to animate, toFixed() gets rid of decimals
+              config={{ duration: 10000 }}
+            >
+              {props => (
+                <div style={props}>
+                  <h1 style={counter}>{props.number.toFixed()}</h1>
+                </div>
+              )}
+            </Spring>
           </div>
         </div>
       )}
@@ -30,4 +42,12 @@ const c1style = {
   background: "steelblue",
   color: "white",
   padding: "1.5rem"
+};
+
+const counter = {
+  background: "#333",
+  textAlign: "center",
+  width: "100px",
+  borderRadius: "50%",
+  margin: "1rem auto"
 };
